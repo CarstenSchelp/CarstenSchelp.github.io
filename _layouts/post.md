@@ -36,7 +36,9 @@ title: "Posts"
 <div style="font-size:medium;text-align:right"><span>by Carsten Schelp</span> <span><a href="{{ site.linkedin }}"><img alt="LinkedIn" src="{{ './img/linkedinicon.png' | absolute_url }}" style="border:0px;margin:0px;padding:0px;" width="22" height="22" /></a></span></div>
 </div>
 <h2>{{ page.title }}</h2>
+<div style="text-align:right"><a href="{{ site.url }}">see all posts</a></div>
 {{ content }}
+<div style="text-align:right"><a href="{{ site.url }}">see all posts</a></div>
 
 
 
