@@ -33,7 +33,6 @@ title: "Posts"
 </header>
 <div style="background-image:url({{ './img/unsupbanner.jpg' | absolute_url }});font-size:150%;color:white;padding:10px;font-family: Helvetica, Arial, sans-serif;">
 <div style="font-size:larger; font-weight:bold;">UNSUPERVISED INTUITION</div>
-<div style="font-size:large; font-weight:bold;">Bits, Pieces, Nuts and Bolts on Data Analysis and Machine Learning.</div>
 <div style="font-size:medium;text-align:right"><span>by Carsten Schelp</span> <span><a href="{{ site.linkedin }}"><img alt="LinkedIn" src="{{ './img/linkedinicon.png' | absolute_url }}" style="border:0px;margin:0px;padding:0px;" width="22" height="22" /></a></span></div>
 </div>
 <h2>{{ page.title }}</h2>
