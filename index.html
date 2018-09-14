@@ -1,1 +1,11 @@
-<h2>Unsupervised Intuition</h2>
+---
+title: ""
+author: "Carsten Schelp"
+layout: post
+---
+{% for post in site.posts %}
+  <a href="{{ post.url }}"><h3><img align="left" alt="thumbnail" src="{{ post.thumb | absolute_url }}"></img>{{ post.title }}</h3></a>
+  <div style="margin-left=20px">{{ post.excerpt }}</div>
+{% endfor %}
+<hr/>
+
