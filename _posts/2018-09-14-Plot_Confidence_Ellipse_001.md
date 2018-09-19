@@ -269,9 +269,9 @@ $$
 The components of the eigenvector $v_1$ that corresponds to the eigenvalue $\lambda_1$ are the same, obviously.
 
 
-For $\lambda_2= 1+p$ :
+For $\lambda_2= 1-p$ :
 
-$$(\mathbf{\Sigma_N}-(1+p) \cdot \mathbf{I})\cdot \mathbf{v_2} = 0$$
+$$(\mathbf{\Sigma_N}-(1-p) \cdot \mathbf{I})\cdot \mathbf{v_2} = 0$$
 
 $$\left(
 \begin{bmatrix}
@@ -279,7 +279,7 @@ $$\left(
 \end{bmatrix}-
 
 \begin{bmatrix}
-1+p & 0 \\ 0 & 1+p
+1-p & 0 \\ 0 & 1-p
 \end{bmatrix}
 \right)
 \cdot \mathbf{v_2}
@@ -290,7 +290,7 @@ $$
 
 $$\begin{align}
 \begin{bmatrix}
--p & p \\ p & -p
+p & p \\ p & p
 \end{bmatrix} \cdot
 \begin{bmatrix}
 v_\text{21} \\ v_\text{22}
@@ -303,22 +303,22 @@ $$
 
 $$\begin{align}
 \begin{vmatrix}
--p\cdot v_\text{21} + p\cdot v_\text{22}=0 \\ p\cdot v_\text{21} -p\cdot v_\text{22}=0
+p\cdot v_\text{21} + p\cdot v_\text{22}=0 \\ p\cdot v_\text{21} + p\cdot v_\text{22}=0
 \end{vmatrix}
 \end{align}
 $$
 
 $$\begin{align}
 \begin{vmatrix}
-p\cdot v_\text{22}=p\cdot v_\text{21} \\
-p\cdot v_\text{21}=p\cdot v_\text{22}
+p\cdot v_\text{21}= -p\cdot v_\text{22} \\
+p\cdot v_\text{21}= -p\cdot v_\text{22}
 \end{vmatrix}
 \end{align}
 $$
 
 $$\begin{align}
 \begin{vmatrix}
-v_\text{22}=v_\text{21} \\ v_\text{21} = v_\text{22}
+v_\text{21}= -v_\text{22} \\ v_\text{21} = -v_\text{22}
 \end{vmatrix}
 \end{align}
 $$
