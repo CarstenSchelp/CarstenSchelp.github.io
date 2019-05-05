@@ -2,7 +2,7 @@
 title: "An Alternative Way to Plot the Covariance Ellipse"
 layout: post
 thumb: "./img/001_thumb.png"
-tags: "covariance ellipse pearson"
+tags: "confidence ellipse covariance pearson"
 gist: "https://gist.github.com/CarstenSchelp/b992645537660bda692f218b562d0712"
 ipynb: "https://github.com/CarstenSchelp/CarstenSchelp.github.io/blob/master/001_generate_plots.ipynb"
 nbviewer: "https://nbviewer.jupyter.org/github/CarstenSchelp/CarstenSchelp.github.io/blob/master/001_generate_plots.ipynb"
@@ -348,6 +348,11 @@ $$\lambda_\text{descending}=1-p$$
 
 Thank you for your attention!
 
+## Update
+
+In the meantime, the implementation in the mentioned [github-gist]({{ page.gist }}) has made it into the collection of examples on [matplotlib.org](https://matplotlib.org/devdocs/gallery/statistics/confidence_ellipse.html#sphx-glr-gallery-statistics-confidence-ellipse-py).
+
+I have updated the code in the gist according to the example there because thanks to the matplotlib community the code got a lot neater.
 
 # Comments
 
