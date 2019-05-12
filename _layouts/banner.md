@@ -37,7 +37,7 @@ layout: default
 <span>
 <a href="{{ site.linkedin }}"/>
 <img alt="LinkedIn" src="{{ './img/linkedinicon.png' | absolute_url }}" style="border:0px;margin:0px;padding:0px;position:relative;left:22px;z-index:+1" width="22" height="22" />
-<img alt="Carsten Schelp" src="{{'./img/Carsten_Schelp.jpg'}}" style="border:0px;margin:0px;padding:0px;border-radius:50%" width="80" height="80"/>
+<img alt="Carsten Schelp" src="{{ baseurl }}/img/Carsten_Schelp.jpg" style="border:0px;margin:0px;padding:0px;border-radius:50%" width="80" height="80"/>
 </a>
 </span>
 </div>

@@ -1,7 +1,7 @@
 ---
 title: "An Alternative Way to Plot the Covariance Ellipse"
 layout: post
-thumb: "./img/001_thumb.png"
+thumb: "./img/ellipses.png"
 tags: "confidence ellipse covariance pearson"
 gist: "https://gist.github.com/CarstenSchelp/b992645537660bda692f218b562d0712"
 ipynb: "https://github.com/CarstenSchelp/CarstenSchelp.github.io/blob/master/001_generate_plots.ipynb"
@@ -9,8 +9,8 @@ nbviewer: "https://nbviewer.jupyter.org/github/CarstenSchelp/CarstenSchelp.githu
 ---
 
 **An elegant and exact way to plot the confidence ellipse of a covariance.**
-
-**Code, explanation, examples and proof.**<!--more-->
+<!--more-->
+**Code, explanation, examples and proof.**
 <img align="right" src="{{ '/img/001_vanilla_ellipse.png' | absolute_url }}" height="200" width="200" alt="Vanilla-Ellipse" style="margin:10px;" />
 
 *Years ago, I was looking for a recipe to plot the confidence ellipse of a covariance. While working solutions where available, I had the idea that there should be a simpler and more elegant way. Shouldn't we be able to plot the ellipse just using mean, standard deviation and the Pearson-Coefficient? This idea kept nagging for my attention and I managed to spend some time on it - on and off.*
