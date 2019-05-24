@@ -2,6 +2,8 @@
 title: "Implementation of an Online Covariance Algorithm"
 layout: post
 thumb: "./img/ocov_add.png"
+image: "./img/ocov_add.png"
+excerpt: "This Python-class implements an online-algorithm for calculating a covariance-matrix."
 tags: "online algorithm covariance merge vectorization"
 ---
 **This Python-class implements an online-algorithm for calculating a covariance-matrix.**<!--more-->

@@ -42,6 +42,7 @@ layout: default
 </span>
 </div>
 </div>
+{% feed_meta %}
 {{ content }}
 {% include analytics.html %}
 

@@ -2,5 +2,6 @@ theme: jekyll-theme-slate
 markdown: kramdown
 excerpt_separator: "<!--more-->"
 linkedin: https://www.linkedin.com/in/carsten-schelp-a51a7611
+author: "Carsten Schelp"
 plugins:
   - jekyll-feed

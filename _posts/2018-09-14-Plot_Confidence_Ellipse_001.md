@@ -2,6 +2,8 @@
 title: "An Alternative Way to Plot the Covariance Ellipse"
 layout: post
 thumb: "./img/ellipses.png"
+image: "./img/ellipses.png"
+excerpt: "An elegant and exact way to plot the confidence ellipse of a covariance."
 tags: "confidence ellipse covariance pearson"
 gist: "https://gist.github.com/CarstenSchelp/b992645537660bda692f218b562d0712"
 ipynb: "https://github.com/CarstenSchelp/CarstenSchelp.github.io/blob/master/001_generate_plots.ipynb"
