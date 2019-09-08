@@ -353,7 +353,7 @@ Thank you for your attention!
 
 ## Update
 
-In the meantime, the implementation in the mentioned [github-gist]({{ page.gist }}) has made it into the collection of examples on [matplotlib.org](https://matplotlib.org/devdocs/gallery/statistics/confidence_ellipse.html#sphx-glr-gallery-statistics-confidence-ellipse-py).
+In the meantime, the implementation in the mentioned [github-gist]({{ page.gist }}) has made it into the collection of examples on [matplotlib.org](https://matplotlib.org/gallery/statistics/confidence_ellipse.html#sphx-glr-gallery-statistics-confidence-ellipse-py).
 
 I have updated the code in the gist according to the example there because thanks to the matplotlib community the code got a lot neater.
 
