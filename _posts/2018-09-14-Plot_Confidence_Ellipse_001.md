@@ -335,8 +335,9 @@ That's all very nice, but it is all still normalized, isn't it?
 
 After simplifying the task of getting the right proportions for the confidence ellipse by normalization, we can reverse the consequences of this trick by simply (re-)scaling the normalized and rotated ellipse along the x- and y-axes. More specifically, scaling by the standard deviation of x along the x-axis and scaling by the standard deviation of y along the y-axis.
 
-You can modify these scaling factors by a factor of typically 2 or 3, thus scaling by two or three standard deviations, respectively. 
-Given your data is normally distributed (like in all the scatter plots shown here), a factor of 2 will dimension the ellipse such, that it will include 95% of the observations, a factor of 3 will make it include 99.7%. (See also the [68-95-99.7 rule](https://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule))
+You can modify these scaling factors by a factor of typically 2 or 3, thus scaling by two or three standard deviations, respectively.
+
+/In an earlier version of this post I stated that, according to the [68-95-99.7 rule](https://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule), 99.7% of the observations of a normally distributed dataset should lie within an ellipse with radiuses of 3 standard deviations. However, I think that I have to correct myself. The 68-95-99.7 rule is valid for a /rectangle/ with the dimensions of 2 times 1, 2 or 3 standard deviations. The rule only makes a statement about a one-dimensional dataset and it does not take covariance into account. The rectangle represents this "each dimenson by itself" view of the data. The ellipse, however, follows the bulk of the data more closely and thus "produces" more outliers than you would expect according to the 68-95-99.7 rule. Thanks to [colseanm](https://github.com/colseanm) how actually checked my earlier statement./
 
 ## Summary
 
