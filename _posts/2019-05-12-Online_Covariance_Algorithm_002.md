@@ -70,9 +70,8 @@ class OnlineCovariance:
         if self._count < 1:
             return None
         variances = np.diagonal(self._cov)
-        variance_rows = np.repeat(variances, self._order)
-        variance_rows.shape = (self._order, self._order)
-        return self._cov / np.sqrt(variance_rows * variance_rows.T)
+        denomiator = np.sqrt(variances[np.newaxis,:] * variances[:,np.newaxis])
+        return self._cov / denomiator
 
     def add(self, observation):
         """
@@ -89,8 +88,8 @@ class OnlineCovariance:
         delta_at_nMin1 = np.array(observation - self._mean)
         self._mean += delta_at_nMin1 / self._count
         weighted_delta_at_n = np.array(observation - self._mean) / self._count
-        D_at_n = np.repeat(weighted_delta_at_n, self._order)
-        D_at_n.shape = (self._order, self._order)
+        shp = (self._order, self._order)
+        D_at_n = weighted_delta_at_n[:, np.newaxis] * np.ones(shp)
         D = (delta_at_nMin1 * self._identity).dot(D_at_n.T)
         self._cov = self._cov * (self._count - 1) / self._count + D
     
