@@ -117,7 +117,7 @@ class OnlineCovariance:
         count_corr = (other.count * self.count) / merged_cov._count
         merged_cov._mean = (self.mean/other.count + other.mean/self.count) * count_corr
         flat_mean_diff = self._mean - other._mean
-        shp = n, n
+        shp = (self._order, self._order)
         mean_diffs = flat_mean_diff[:, np.newaxis] * np.ones(shp)
         merged_cov._cov = (self._cov * self.count \
                            + other._cov * other._count \
