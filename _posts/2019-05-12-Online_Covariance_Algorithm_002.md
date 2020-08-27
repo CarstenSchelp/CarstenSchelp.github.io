@@ -20,6 +20,8 @@ import numpy as np
 
 
 ```python
+import numpy as np
+
 class OnlineCovariance:
     """
     A class to calculate the mean and the covariance matrix
@@ -34,6 +36,7 @@ class OnlineCovariance:
         """
         self._identity = np.identity(order)
         self._ones = np.ones(order)
+        self._zeros = np.zeros((order, order))
         self._count = 0
         self._mean = np.zeros(order)
         self._cov = np.zeros((order,order))
@@ -89,7 +92,7 @@ class OnlineCovariance:
         self._mean += delta_at_nMin1 / self._count
         weighted_delta_at_n = np.array(observation - self._mean) / self._count
         shp = (self._order, self._order)
-        D_at_n = weighted_delta_at_n[:, np.newaxis] * np.ones(shp)
+        D_at_n = weighted_delta_at_n[:, np.newaxis] + self._zeros
         D = (delta_at_nMin1 * self._identity).dot(D_at_n.T)
         self._cov = self._cov * (self._count - 1) / self._count + D
     
@@ -118,7 +121,7 @@ class OnlineCovariance:
         merged_cov._mean = (self.mean/other.count + other.mean/self.count) * count_corr
         flat_mean_diff = self._mean - other._mean
         shp = (self._order, self._order)
-        mean_diffs = flat_mean_diff[:, np.newaxis] * np.ones(shp)
+        mean_diffs = flat_mean_diff[:, np.newaxis] + self._zeros
         merged_cov._cov = (self._cov * self.count \
                            + other._cov * other._count \
                            + mean_diffs * mean_diffs.T * count_corr) \
