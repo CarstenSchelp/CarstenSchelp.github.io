@@ -34,13 +34,13 @@ class OnlineCovariance:
         order: int, The order (=="number of features") of the incrementally added
         dataset and of the resulting covariance matrix.
         """
+        self._order = order
+        self._shape = (order, order)
         self._identity = np.identity(order)
         self._ones = np.ones(order)
-        self._zeros = np.zeros((order, order))
         self._count = 0
         self._mean = np.zeros(order)
-        self._cov = np.zeros((order,order))
-        self._order = order
+        self._cov = np.zeros(self._shape)
         
     @property
     def count(self):
@@ -92,7 +92,7 @@ class OnlineCovariance:
         self._mean += delta_at_nMin1 / self._count
         weighted_delta_at_n = np.array(observation - self._mean) / self._count
         shp = (self._order, self._order)
-        D_at_n = weighted_delta_at_n[:, np.newaxis] + self._zeros
+        D_at_n = np.broadcast_to(weighted_delta_at_n, self._shape).T
         D = (delta_at_nMin1 * self._identity).dot(D_at_n.T)
         self._cov = self._cov * (self._count - 1) / self._count + D
     
@@ -121,7 +121,7 @@ class OnlineCovariance:
         merged_cov._mean = (self.mean/other.count + other.mean/self.count) * count_corr
         flat_mean_diff = self._mean - other._mean
         shp = (self._order, self._order)
-        mean_diffs = flat_mean_diff[:, np.newaxis] + self._zeros
+        mean_diffs = np.broadcast_to(flat_mean_diff, self._shape).T
         merged_cov._cov = (self._cov * self.count \
                            + other._cov * other._count \
                            + mean_diffs * mean_diffs.T * count_corr) \
